@@ -1,0 +1,17 @@
+{
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true
+	},
+	"eslint.validate": [
+		"typescript"
+	],
+	"editor.formatOnSave": true,
+	"editor.insertSpaces": false,
+	"eslint.workingDirectories": [
+		{
+			"mode": "auto"
+		}
+	],
+	"editor.autoIndent": "full",
+	"editor.detectIndentation": false
+}
