@@ -1,5 +1,5 @@
-# Create JD App
+# Solid Template
 
-This project was created using [Create JD App](https://github.com/OrJDev/create-jd-app)
+This template is based on [Create JD App](https://github.com/OrJDev/create-jd-app).
 
 

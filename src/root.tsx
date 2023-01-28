@@ -1,5 +1,5 @@
 // @refresh reload
-import "./root.css";
+import "./core.css";
 import { Suspense } from "solid-js";
 import {
 	Body,
@@ -18,7 +18,7 @@ export default function Root() {
 	return (
 		<Html lang="en">
 			<Head>
-				<Title>Create JD App</Title>
+				<Title>Create Solid + tRPC</Title>
 				<Meta charset="utf-8" />
 				<Meta name="viewport" content="width=device-width, initial-scale=1" />
 			</Head>
