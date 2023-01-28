@@ -4,15 +4,19 @@ import { Suspense } from "solid-js";
 import {
 	Body,
 	ErrorBoundary,
-	FileRoutes,
 	Head,
 	Html,
 	Meta,
+	Navigate,
+	Route,
 	Routes,
 	Scripts,
 	Title,
 } from "solid-start";
 import { trpc, queryClient, client } from "~/utils/trpc";
+import Home from "./routes/home";
+import About from "./routes/about";
+import NotFound from "./routes/[...404]";
 
 export default function Root() {
 	return (
@@ -27,7 +31,10 @@ export default function Root() {
 					<Suspense>
 						<ErrorBoundary>
 							<Routes>
-								<FileRoutes />
+								<Route path="/home" component={Home} />
+								<Route path="/about" component={About} />
+								<Route path="/" element={<Navigate href="/home" />} />
+								<Route path="*" component={NotFound} />
 							</Routes>
 						</ErrorBoundary>
 					</Suspense>
