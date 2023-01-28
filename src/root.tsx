@@ -7,16 +7,11 @@ import {
 	Head,
 	Html,
 	Meta,
-	Navigate,
-	Route,
-	Routes,
 	Scripts,
 	Title,
 } from "solid-start";
 import { trpc, queryClient, client } from "~/utils/trpc";
-import Home from "./routes/home";
-import About from "./routes/about";
-import NotFound from "./routes/[...404]";
+import Router from "./routes/router";
 
 export default function Root() {
 	return (
@@ -30,12 +25,7 @@ export default function Root() {
 				<trpc.Provider client={client} queryClient={queryClient}>
 					<Suspense>
 						<ErrorBoundary>
-							<Routes>
-								<Route path="/home" component={Home} />
-								<Route path="/about" component={About} />
-								<Route path="/" element={<Navigate href="/home" />} />
-								<Route path="*" component={NotFound} />
-							</Routes>
+							<Router />
 						</ErrorBoundary>
 					</Suspense>
 				</trpc.Provider>
